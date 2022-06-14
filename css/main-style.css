@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bs-color-primary: #DADBD3; 
+    --bs-color-secondary: #009688;
+    --bs-color-tertiary: #8EDAFD;
+
+}
+
+body {
+    font-family: 'Ubuntu';
+    background-color: var(--bs-color-primary);
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*BACKGROUND*/
+.top-bg {
+    height: 16vh;
+    background-color: var(--bs-color-secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+/*CONTAINER APP*/
+.main-container {
+    background-color: white;
+    height: 95vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*SEZIONE LISTA CONTATTI*/
+
+/* User name */
+.contatti-section {
+    width: 40%;
+}
+.user-name-row {
+    height: 50px;
+    background-color: var(--bs-color-primary);
+}
+.user-profile-img {
+    width: 40px;
+}
+
+/* User notifications */
+
+.notification-row {
+    height: 70px;
+    background-color: var(--bs-color-tertiary);
+}
+
+.my-nav {
+    --bs-nav-link-padding-x: 0.5rem;
+    --bs-nav-link-color: #B1B1B1;
+    --bs-nav-link-hover-color: black;
+    --bs-nav-link-disabled-color: #6c757d;
+}
+
+.bg-message {
+    background-image: url(../img/mine.jpg);
+}
+
+
+
+
+
+
