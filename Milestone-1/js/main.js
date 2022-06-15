@@ -166,29 +166,7 @@ const appVue = new Vue({
   el: "#app",
 
   data: {
-      listaContatti: [
-          // Un utente
-          {
-              // Foto profilo
-              avatar: "",
-              // Nome utente
-              name: "",
-              // Messaggi in ingresso e in uscita
-              messages: [
-                  // Singolo messaggio
-                  {
-                      // Contenuto del messaggio
-                      message: "",
-                      // Data del messaggio
-                      date: "",
-                      // Stato del messaggio - ricevuto / inviato
-                      status: "sent",
-                  }
-              ],
-
-
-
-      }]
+      listaContatti: contatti
   },
 
 methods: {
