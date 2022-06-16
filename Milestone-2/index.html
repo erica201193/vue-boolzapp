@@ -63,7 +63,9 @@
 
                     <div class="contacts-container flex-grow-1 overflow-auto h-100">
 
-                        <div v-for="contatto in listaContatti" class="single-contact d-flex align-items-start p-2 contacts-border active-user">
+                        <div class="single-contact d-flex align-items-start p-2 contacts-border"
+                            v-for="contatto in listaContatti" @click = "setActiveUser(contatto)">
+
                             <img class="user-profile-img rounded-circle" :src=" '../img/avatar' + contatto.avatar + '.jpg' " alt="Immagine profilo">
                             <div class="d-inline-block ps-2">
                                 <div class="d-inline-block">{{contatto.name}}</div>
@@ -90,12 +92,15 @@
                     </div>
                     <!-- Sezione messaggi -->
                     <div class="messages-container flex-grow-1 overflow-auto h-100 px-3">
-                        <div class="d-flex justify-content-end pt-4 pb-2">
+
+                        <div class="d-flex justify-content-end pt-4 pb-2"
+                            v-for="messaggio in ">
                             <div class="sent-message rounded p-1">
                                 <div class="ps-1 pe-5 lh-1">Hai portato a spasso il cane?</div>
                                 <div class="orario-invio text-end lh-1">15:30</div>
                             </div>
                         </div>
+
                         <div class="d-flex justify-content-end pb-2">
                             <div class="sent-message rounded p-1">
                                 <div class="ps-1 pe-5 lh-1">Ricordati di stendere i panni</div>

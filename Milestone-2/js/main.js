@@ -171,6 +171,9 @@ const appVue = new Vue({
   },
 
 methods: {
+  setActiveUser: function (contatto) {
+    this.activeUser = contatto;   
+  }
 
 }
 });
