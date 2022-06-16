@@ -116,6 +116,9 @@ img {
 .active-user {
     background-color: var(--bs-color-primary);
 }
+.single-contact {
+    cursor: pointer;
+}
 
 
 .messages-container {
