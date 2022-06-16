@@ -178,9 +178,17 @@ methods: {
     console.log(this.activeUser);
   },
 
-  printMessage: function (testoInserito) {
-    this.activeUser.messages.push(testoInserito);
-    console.log(testoInserito)
+  rispostaAutomatica() {
+    this.activeUser.messages.push({"message":"Ok!", "status":"received", "date":"10/01/2020 15:56:00"});
+  },
+
+  printMessage: function () {
+    this.activeUser.messages.push({"message":this.testoInserito, "status":"sent", "date":"10/01/2020 15:55:00"});
+
+    this.testoInserito = "";
+    
+    setTimeout(this.rispostaAutomatica(), 1000);
+
   }
 
 }
