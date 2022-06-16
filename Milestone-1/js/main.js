@@ -1,4 +1,4 @@
-const contatti = [
+const listaContatti = [
   {
     name: "Michele",
     avatar: "_1",
@@ -166,7 +166,7 @@ const appVue = new Vue({
   el: "#app",
 
   data: {
-      listaContatti: contatti
+      contatti: listaContatti,
   },
 
 methods: {
