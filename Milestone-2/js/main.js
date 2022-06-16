@@ -167,12 +167,13 @@ const appVue = new Vue({
 
   data: {
       listaContatti: contatti,
-      activeUser: null,
+      activeUser: listaContatti[0],
   },
 
 methods: {
   setActiveUser: function (contatto) {
-    this.activeUser = contatto;   
+    this.activeUser = contatto;
+    console.log(contatto)  
   }
 
 }
