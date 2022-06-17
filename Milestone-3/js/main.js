@@ -169,6 +169,8 @@ const appVue = new Vue({
       listaContatti: contatti,
       activeUser: contatti[0],
       testoInserito: "",
+      contattoCercato: "",
+      listaContattiFiltrata: contatti,
   },
 
 methods: {
@@ -188,8 +190,11 @@ methods: {
     this.testoInserito = "";
     
     setTimeout(this.rispostaAutomatica(), 1000);
+  },
 
-  }
+  filteredContacts() {
+    return this.listaContatti.filter(contatto.name.toLowerCase().includes(contattoCercato.value.toLowerCase()));
+  },
 
 }
 });

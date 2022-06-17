@@ -57,13 +57,17 @@
                     <div class="search-container">
                         <div class="input-group p-2">
                             <a class="input-group-text my-input-group-text" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                            <input type="text" class="form-control my-form-control" placeholder="Cerca o inizia una nuova chat...">
+
+                            <input type="text" class="form-control my-form-control" placeholder="Cerca o inizia una nuova chat..."
+                            v-model="contattoCercato">
+
                         </div>
                     </div>
 
                     <div class="contacts-container flex-grow-1 overflow-auto h-100">
-
-                        <div class="single-contact d-flex align-items-start p-2 contacts-border"
+<!-- 
+                        <template v-for="contact in filteredContacts()"> -->
+                            <div class="single-contact d-flex align-items-start p-2 contacts-border"
                             v-for="contatto in listaContatti" @click = "setActiveUser(contatto)">
 
                             <img class="user-profile-img rounded-circle" :src=" '../img/avatar' + contatto.avatar + '.jpg' " alt="Immagine profilo">
@@ -72,6 +76,8 @@
                                 <div class="last-message-info">Ultimo messaggio inviato</div>
                             </div>
                         </div>
+                        <!-- </template> -->
+
                     </div>
                 </div>
                 <div class="col d-flex flex-column h-100">
